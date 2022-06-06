@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import BeginHandForm from "./components/BeginHandForm";
 import { useState } from "react";
+import Game from "./components/Game";
 
 function App() {
   const [numPlayers, setNumPlayers] = useState();
@@ -16,7 +17,7 @@ function App() {
       </div>
     );
   } else {
-    return <div>start game</div>;
+    return <Game numPlayers={numPlayers} />;
   }
 }
 
